@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | VirTO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <div class="logo">VirTO</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="contact-hero">
+        <h1 class="fade-up">Contact Us</h1>
+        <p class="fade-up">Hubungi tim kami untuk informasi, kerja sama, atau pengembangan Virtual Tour</p>
+    </header>
+
+    <section class="contact-section">
+        <div class="contact-grid">
+
+            <!-- INFO -->
+            <div class="contact-info fade-left">
+                <h2>Informasi Kontak</h2>
+                <p>
+                    VirTO merupakan media promosi digital berbasis Virtual Tour 360°
+                    yang dikembangkan oleh mahasiswa sebagai bagian dari tugas akhir.
+                </p>
+
+                <ul>
+                    <li><strong>Email:</strong> virto.project@gmail.com</li>
+                    <li><strong>Telepon:</strong> +62 8xx-xxxx-xxxx</li>
+                    <li><strong>Lokasi:</strong> Cirebon, Jawa Barat</li>
+                </ul>
+            </div>
+
+            <!-- FORM -->
+            <div class="contact-form fade-right">
+                <h2>Kirim Pesan</h2>
+                <form>
+                    <input type="text" placeholder="Nama Lengkap" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea rows="5" placeholder="Pesan"></textarea>
+                    <button type="submit">Kirim Pesan</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <h2 class="footer-h2">Developed by</h2>
+        <div class="footer-content">
+            <p>Nyawit</p>
+            <p>© 2026 VirTO . All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- SCROLL ANIMATION SCRIPT -->
+    <script>
+        const faders = document.querySelectorAll('.fade-up, .fade-left, .fade-right');
+
+        const appearOptions = {
+            threshold: 0.2
+        };
+
+        const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = "translate(0)";
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            fader.style.opacity = 0;
+            appearOnScroll.observe(fader);
+        });
+    </script>
+
+</body>
+</html>

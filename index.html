@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VirTO | Virtual Tour Cirebon</title>
+
+    <!-- GOOGLE FONT -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Pannellum -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.css" />
+    <script src="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.js"></script>
+
+</head>
+
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <div class="logo">VirTO</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-content fade-up">
+            <h1>Virtual Tour Destinasi Wisata Cirebon</h1>
+            <p>
+                Media promosi digital berbasis visual 360°
+                untuk mengenal destinasi wisata secara interaktif
+            </p>
+        </div>
+    </header>
+
+    <!-- INTRO -->
+    <section class="intro">
+        <h2 class="section-title fade-up">Fitur Virtual Tour</h2>
+        <p class="section-desc fade-up">
+            Website ini menyediakan katalog virtual tour destinasi wisata
+            sebagai media promosi pariwisata digital yang modern dan interaktif.
+        </p>
+
+        <div class="intro-grid">
+            <div class="intro-box fade-left">
+                <h3>Berbasis Website</h3>
+                <p>
+                    Virtual tour dapat diakses langsung melalui browser tanpa instalasi.
+                    Praktis, fleksibel, dan dapat diakses dari berbagai perangkat.
+                </p>
+            </div>
+
+            <div class="intro-divider"></div>
+
+            <div class="intro-box fade-right">
+                <h3>Visual Berkualitas Tinggi</h3>
+                <p>
+                    Panorama resolusi tinggi menghadirkan pengalaman eksplorasi
+                    yang realistis dan nyaman bagi pengguna.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- preview -->
+    <section class="tour-section">
+        <div class="tour-flex">
+            <div class="tour-container">
+                <div id="panorama"></div>
+            </div>
+            <div class="tour-p">
+                <h2>Preview</h2>
+                <p>Teknologi panorama 360° memungkinkan pengguna menjelajahi destinasi wisata secara interaktif dan
+                    imersif. Pengalaman ini memberikan gambaran nyata sebelum melakukan kunjungan langsung.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        var viewer = pannellum.viewer('panorama', {
+            type: "equirectangular",
+            panorama: "assets/img/360.jpg",
+            autoLoad: true,
+            yaw: 180,
+            hfov: 110,
+            autoRotate: -3,
+            autoRotateInactivityDelay: 2000,
+            showControls: true
+        });
+    </script>
+
+    <!-- DESTINATIONS -->
+    <section class="destinations">
+        <h2 class="section-title fade-up">Destinasi Virtual</h2>
+
+        <div class="dest-grid">
+            <a href="/rarasantang.html" class="dest-card fade-up">
+                <img src="assets/img/bima-2/rarasantang.jpg" alt="Bima 2">
+                <div class="dest-info">
+                    <h3>Gedung Kesenian Rarasantang</h3>
+                    <p>Virtual Tour Rarasantang</p>
+                </div>
+            </a>
+
+            <a href="#" class="dest-card fade-up">
+                <img src="assets/img/keraton.jpg" alt="Monas">
+                <div class="dest-info">
+                    <h3>Keraton Kasepuhan</h3>
+                    <p>coming soon</p>
+                </div>
+            </a>
+
+            <a href="#" class="dest-card fade-up">
+                <img src="assets/img/sunyaragi/sunyaragi.jpg" alt="sunyaragi">
+                <div class="dest-info">
+                    <h3>Goa Sunyaragi</h3>
+                    <p>coming soon</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <h3>Developed by</h3>
+        <p>Nyawit</p>
+        <span>© 2026 VirTO. All rights reserved.</span>
+    </footer>
+
+</body>
+
+</html>
