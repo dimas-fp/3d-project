@@ -618,11 +618,17 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+
     .tour-detail {
-        padding: 100px 5% 60px;
+        padding: 80px 0 40px;
     }
 
     .tour-frame {
-        height: 60vh;
+        height: calc(100vh - 70px);
+        min-height: 500px;
+    }
+
+    .tour-frame iframe {
+        height: 100%;
     }
 }
