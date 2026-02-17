@@ -1,1 +1,38 @@
-style
+.tour-detail {
+    text-align: center;
+}
+
+.tour-detail h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.tour-detail p {
+    color: var(--gray);
+    margin-bottom: 40px;
+}
+
+.tour-frame {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,.1);
+}
+
+.tour-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tour-detail {
+        padding: 100px 5% 60px;
+    }
+
+    .tour-frame {
+        height: 60vh;
+    }
+}
